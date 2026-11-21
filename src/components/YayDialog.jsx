@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { AnimatePresence, motion } from "motion/react"
 
+import { Heart } from "@/components/Icons"
+
 const ITEMS = [
   {
     id: "letter",
@@ -66,7 +68,8 @@ export function YayDialog({ open, onClose, onPoppers, onJump }) {
             <div className="relative">
               <p className="eyebrow">status update</p>
               <h2 id="yay-title" className="mt-2 text-4xl leading-[1.05] sm:text-5xl">
-                yay <span className="hand text-rose">🥹</span>
+                yay{" "}
+                <Heart className="inline size-7 align-baseline text-rose sm:size-8" />
               </h2>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-cream/70">
                 A hundred percent. Not fifty, not ninety-nine. Thank you, meri sonna ji — you
@@ -105,7 +108,10 @@ export function YayDialog({ open, onClose, onPoppers, onJump }) {
                     <span className="block text-sm font-medium text-cream">
                       one more round of poppers
                     </span>
-                    <span className="block text-xs text-cream/45">for good measure 🎉</span>
+                    <span className="flex items-center gap-1 text-xs text-cream/45">
+                      for good measure
+                      <Heart className="size-2.5 text-rose" />
+                    </span>
                   </span>
                   <span className="text-cream/30 transition-transform group-hover:translate-x-1 group-hover:text-rose">
                     →

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
 
+import { Heart } from "@/components/Icons"
 import { Meteors } from "@/components/ui/meteors"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
 
@@ -239,7 +240,10 @@ export function ForgiveArena({ forgiven, onForgive }) {
             background="linear-gradient(180deg,#e4557a,#a32c52)"
             className="px-6 py-3.5 text-sm font-semibold tracking-wide text-[#2a0a15] shadow-[0_18px_60px_-18px_rgba(228,85,122,0.85)] sm:px-8 sm:py-4 sm:text-base"
           >
-            <span className="relative z-10">forgive 100% 🤍</span>
+            <span className="relative z-10 inline-flex items-center gap-2">
+              forgive 100%
+              <Heart className="size-3.5" />
+            </span>
           </ShimmerButton>
         </div>
       </div>

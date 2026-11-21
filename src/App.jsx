@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import confetti from "canvas-confetti"
 
 import { ForgiveArena } from "@/components/ForgiveArena"
+import { Heart, Lock } from "@/components/Icons"
 import { YayDialog } from "@/components/YayDialog"
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
 import { AuroraBackground } from "@/components/ui/aurora-background"
@@ -78,8 +79,9 @@ function Gate({ open, children, label }) {
       </div>
       {!open && (
         <div className="pointer-events-none absolute inset-0 z-10 flex items-start justify-center pt-10">
-          <span className="rounded-full border border-cream/15 bg-night/70 px-4 py-2 text-xs tracking-wide text-cream/70 backdrop-blur-sm">
-            🔒 {label}
+          <span className="inline-flex items-center gap-2 rounded-full border border-cream/15 bg-night/70 px-4 py-2 text-xs tracking-wide text-cream/70 backdrop-blur-sm">
+            <Lock className="size-3 text-gold/80" />
+            {label}
           </span>
         </div>
       )}
@@ -101,10 +103,12 @@ export default function App() {
   }, [])
 
   const poppers = useCallback(() => {
+    // a real heart shape (not an emoji) so it renders on every device, tinted by the palette
     const hearts = [
-      confetti.shapeFromText({ text: "🤍", scalar: 2.4 }),
-      confetti.shapeFromText({ text: "💗", scalar: 2.2 }),
-      confetti.shapeFromText({ text: "🎉", scalar: 2 }),
+      confetti.shapeFromPath({
+        path: "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z",
+        matrix: [1.5, 0, 0, 1.5, -8, -7],
+      }),
     ]
     const base = {
       ticks: 320,
@@ -125,12 +129,12 @@ export default function App() {
       () =>
         confettiRef.current?.fire({
           ...base,
-          particleCount: 34,
+          particleCount: 22,
           spread: 120,
           startVelocity: 42,
           shapes: hearts,
-          scalar: 2.2,
-          origin: { x: 0.25, y: 0.8 },
+          scalar: 1.6,
+          origin: { x: 0.22, y: 0.78 },
         }),
       160
     )
@@ -138,12 +142,12 @@ export default function App() {
       () =>
         confettiRef.current?.fire({
           ...base,
-          particleCount: 34,
+          particleCount: 22,
           spread: 120,
           startVelocity: 42,
           shapes: hearts,
-          scalar: 2.2,
-          origin: { x: 0.75, y: 0.8 },
+          scalar: 1.6,
+          origin: { x: 0.78, y: 0.78 },
         }),
       300
     )
@@ -280,8 +284,9 @@ export default function App() {
                 <div className="animate-hover-heart absolute -top-2 -left-3 -rotate-6 rounded-full bg-rose px-3 py-1 text-[0.65rem] font-semibold text-[#3a0d1c] shadow-lg sm:-left-6">
                   my favourite person
                 </div>
-                <div className="animate-hover-heart absolute right-0 bottom-16 rotate-6 rounded-full border border-cream/20 bg-night/80 px-3 py-1 text-[0.65rem] text-cream/80 backdrop-blur-sm">
-                  sonna ji 🤍
+                <div className="animate-hover-heart absolute right-0 bottom-16 inline-flex rotate-6 items-center gap-1 rounded-full border border-cream/20 bg-night/80 px-3 py-1 text-[0.65rem] text-cream/80 backdrop-blur-sm">
+                  sonna ji
+                  <Heart className="size-2.5 text-rose" />
                 </div>
               </div>
             </BlurFade>
@@ -380,7 +385,7 @@ export default function App() {
             <div className="mt-10">
               {forgiven ? (
                 <div className="paper rounded-[2rem] p-8 text-center">
-                  <p className="text-4xl">🥹</p>
+                  <Heart className="mx-auto size-9 text-rose" />
                   <h3 className="mt-3 text-2xl">you already forgave me</h3>
                   <p className="mx-auto mt-2 max-w-sm text-sm text-cream/60">
                     Thank you again, sonna ji. The menu is still here if you want it.
@@ -489,7 +494,8 @@ export default function App() {
               onClick={poppers}
               className="mt-1 cursor-pointer rounded-full border border-cream/20 px-4 py-2 text-xs text-cream/65 transition-colors hover:border-rose/50 hover:text-cream"
             >
-              say it again 🎉
+              one more time
+              <Heart className="ml-1.5 inline size-3 text-rose" />
             </button>
           )}
         </div>
