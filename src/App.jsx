@@ -21,7 +21,7 @@ const STRIP = [
 ]
 
 const LETTER =
-  "I am really sorry. I know sometimes I am not able to give you sufficient time and care, but deep down I love you soo soo much, meri sonna ji. Please forgive your golu."
+  "Golu ji, my most beautiful girlfriend 🥹 I am really sorry for hurting you, making you mad, and not being able to say sorry in time. I know sometimes I just get busy or sleep without giving you proper time 🥺 Your golu is very sorry for this. I will try to not make my beautiful sonna ji more gussa in future. Your golu is really sorry, please forgive him 🙏"
 
 export default function App() {
   const confettiRef = useRef(null)
