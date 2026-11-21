@@ -8,19 +8,13 @@ const ITEMS = [
     id: "letter",
     kicker: "01",
     label: "read the letter again",
-    hint: "the part i should have said out loud",
-  },
-  {
-    id: "promises",
-    kicker: "02",
-    label: "my twelve promises",
-    hint: "small, boring, kept — not big and forgotten",
+    hint: "what i wanted to say",
   },
   {
     id: "reasons",
-    kicker: "03",
+    kicker: "02",
     label: "why i love you",
-    hint: "a list that could honestly be longer",
+    hint: "a few of the reasons",
   },
 ]
 
@@ -72,9 +66,7 @@ export function YayDialog({ open, onClose, onPoppers, onJump }) {
                 <Heart className="inline size-7 align-baseline text-rose sm:size-8" />
               </h2>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-cream/70">
-                A hundred percent. Not fifty, not ninety-nine. Thank you, meri sonna ji — you
-                have no idea how much lighter that makes me. Pick something from the menu, or
-                just close this and stay a while.
+                Thank you, meri sonna ji. Pick anything from the menu, or just close this.
               </p>
 
               <div className="mt-6 space-y-2">
@@ -103,7 +95,7 @@ export function YayDialog({ open, onClose, onPoppers, onJump }) {
                   onClick={onPoppers}
                   className="group flex w-full cursor-pointer items-center gap-4 rounded-2xl border border-rose/25 bg-rose/[0.08] px-4 py-3.5 text-left transition-all hover:border-rose/60 hover:bg-rose/[0.14]"
                 >
-                  <span className="text-[0.65rem] tracking-[0.2em] text-gold/70">04</span>
+                  <span className="text-[0.65rem] tracking-[0.2em] text-gold/70">03</span>
                   <span className="flex-1">
                     <span className="block text-sm font-medium text-cream">
                       one more round of poppers
@@ -120,7 +112,7 @@ export function YayDialog({ open, onClose, onPoppers, onJump }) {
               </div>
 
               <div className="mt-6 flex items-center justify-between gap-4 border-t border-cream/10 pt-4">
-                <p className="hand text-sm text-cream/55">ps. i meant every single word.</p>
+                <p className="hand text-sm text-cream/55">i meant all of it.</p>
                 <button
                   type="button"
                   onClick={onClose}

@@ -6,14 +6,10 @@ import { Meteors } from "@/components/ui/meteors"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
 
 const TAUNTS = [
-  "nope. that one has legs.",
-  "it ran. it always runs.",
-  "you're only making the big one bigger 😌",
-  "the 100% one is right there, sonna ji.",
-  "catch it with your heart, not your cursor.",
-  "this button has filed a restraining order.",
-  "almost! (no it wasn't)",
-  "try the shiny one. it *wants* to be pressed.",
+  "nope. try the big one.",
+  "it moved again.",
+  "the big one works.",
+  "almost, sonna ji.",
 ]
 
 const REDUCED = () =>
@@ -182,10 +178,8 @@ export function ForgiveArena({ forgiven, onForgive }) {
 
   const hint =
     attempts === 0
-      ? "three buttons. only one of them will hold still."
-      : attempts < 3
-        ? `${attempts} attempt${attempts > 1 ? "s" : ""}. those two are not going to happen.`
-        : `${attempts} attempts. okay — the shiny one is genuinely trying its best.`
+      ? "press the big one."
+      : `${attempts} attempt${attempts > 1 ? "s" : ""}. it never works.`
 
   return (
     <div className="relative">

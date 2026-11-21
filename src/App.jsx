@@ -15,60 +15,24 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
 
 const STRIP = [
   "meri sonna ji",
-  "sorry, golu",
-  "you are my favourite notification",
-  "i'll do better",
-  "100% yours",
+  "i'm sorry",
+  "i love you",
   "forgive me?",
-  "still your biggest fan",
-  "the best thing in my phone",
-]
-
-const WRONGS = [
-  {
-    did: "I answered in half sentences.",
-    got: "You learned to finish my thoughts on your own.",
-  },
-  {
-    did: "“Five minutes” at nine p.m.",
-    got: "You stayed up till one anyway. Without complaining.",
-  },
-  {
-    did: "I asked about my day first.",
-    got: "You quietly stopped telling me about yours.",
-  },
+  "100% yours",
 ]
 
 const LETTER =
-  "Anjali, I'm really sorry. I know that sometimes I'm not able to give you the time and the care you deserve — that I disappear into my own day and leave you waiting on the other side of it. You never asked for much. A reply. A call that didn't get cut short. Me noticing when your voice went quiet. And deep down, past every deadline and every distracted message, I love you soo soo much, meri sonna ji. Please forgive your golu."
-
-const PROMISES = [
-  "Your call comes before the next commit.",
-  "No phone after eleven. You get the last hour of my day, not the leftovers.",
-  "Sunday is yours. Not “mostly” — yours.",
-  "I ask about your day before I talk about mine.",
-  "I say thank you for the small things, out loud, every single time.",
-  "When I'm overwhelmed I tell you. I don't go quiet on you.",
-  "I remember the things you mention once, in passing.",
-  "I show up on time, or I tell you why before you have to ask.",
-  "Your bad days get my full attention, not my “we'll talk tomorrow”.",
-  "I apologise properly — no “but”, no defending, no score-keeping.",
-  "I brag about you to people who have never met you.",
-  "I choose you again on the boring days. Especially the boring days.",
-]
+  "Anjali, I'm really sorry. I know sometimes I'm not able to give you the time and care you deserve, and I know that must feel really bad. I'm not great at saying all this out loud, but I never want you to doubt how much you mean to me. Deep down I love you soo soo much meri sonna ji. Please forgive your golu."
 
 const REASONS = [
   "the way you say my name when you're sleepy",
-  "your laugh arriving in the middle of a sentence",
-  "how you carry everyone and forget to sit down",
-  "your terrible, perfect puns",
-  "the way you fight for the small things",
-  "how you remember what I said once, in passing",
-  "your handwriting on the note stuck to the fridge",
-  "the little noise you make when the tea is good",
-  "how brave you are and how little you ask for",
-  "your patience with a boy who is still learning",
-  "the fact that you're reading this at all",
+  "your laugh in the middle of a sentence",
+  "how you take care of everyone and forget yourself",
+  "your terrible puns",
+  "how you remember the small things i mention once",
+  "how patient you are with me",
+  "the way you get excited about tiny things",
+  "your voice when you're telling me about your day",
 ]
 
 function Gate({ open, children, label }) {
@@ -196,7 +160,7 @@ export default function App() {
         <Particles className="absolute inset-0" quantity={70} size={0.5} color="#f4c9a4" ease={70} />
       </div>
 
-      <header className="fixed inset-x-0 top-0 z-50">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-cream/[0.07] bg-night/80 backdrop-blur-xl">
         <div className="shell flex items-center justify-between py-4">
           <span className="hand text-lg text-cream/65">for anjali</span>
           <div className="flex items-center gap-2.5 rounded-full border border-cream/10 bg-night/55 px-3.5 py-1.5 backdrop-blur-md">
@@ -222,7 +186,7 @@ export default function App() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
             <div>
               <BlurFade delay={0.05} direction="up">
-                <p className="eyebrow">a small apology · built at 1 a.m. · for anjali</p>
+                <p className="eyebrow">for anjali</p>
               </BlurFade>
 
               <BlurFade delay={0.15} direction="up">
@@ -246,9 +210,8 @@ export default function App() {
 
               <BlurFade delay={0.3} direction="up">
                 <p className="mt-6 max-w-md text-[0.95rem] leading-relaxed text-cream/65 sm:text-base">
-                  I owe you more than one sorry, so I built you an entire page instead of sending
-                  a two-line text at midnight. Read it slowly. There's a button at the end, and it
-                  is genuinely trying to be pressed.
+                  I'm sorry about the time I haven't given you. It's easier to write this down
+                  than to say it, so read it once, and then press the button at the end.
                 </p>
               </BlurFade>
 
@@ -258,9 +221,8 @@ export default function App() {
                     href="#letter"
                     className="rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-[#2a0a15] transition-transform hover:-translate-y-0.5"
                   >
-                    start here ↓
+                    read it ↓
                   </a>
-                  <span className="hand text-sm text-cream/45">two minutes. no rush.</span>
                 </div>
               </BlurFade>
             </div>
@@ -277,9 +239,6 @@ export default function App() {
                     className="block w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent to-transparent" />
-                  <p className="hand absolute inset-x-0 bottom-3 text-center text-xs text-cream/85">
-                    her, being unfair in a blazer
-                  </p>
                 </div>
                 <div className="animate-hover-heart absolute -top-2 -left-3 -rotate-6 rounded-full bg-rose px-3 py-1 text-[0.65rem] font-semibold text-[#3a0d1c] shadow-lg sm:-left-6">
                   my favourite person
@@ -311,7 +270,7 @@ export default function App() {
         <div className="shell">
           <div className="mx-auto max-w-3xl">
             <BlurFade inView direction="up">
-              <p className="eyebrow">the part i should have said out loud</p>
+              <p className="eyebrow">sorry, anjali</p>
             </BlurFade>
 
             <BlurFade inView delay={0.08} direction="up">
@@ -325,44 +284,9 @@ export default function App() {
             </BlurFade>
 
             <BlurFade inView delay={0.2} direction="up">
-              <p className="hand mt-8 text-right text-lg text-rose/90">
-                — your golu, who is still learning
-              </p>
+              <p className="hand mt-8 text-right text-lg text-rose/90">— your golu</p>
             </BlurFade>
 
-            <div className="hairline my-12" />
-
-            <BlurFade inView direction="up">
-              <p className="max-w-xl text-sm leading-relaxed text-cream/55">
-                None of that was your fault. It was me, being careless with the one person who
-                never once ran out of patience for me.
-              </p>
-            </BlurFade>
-          </div>
-        </div>
-      </section>
-
-      {/* ───────────────────────── what i got wrong ───────────────────────── */}
-      <section className="relative z-10 pb-20 sm:pb-28">
-        <div className="shell">
-          <div className="mx-auto max-w-3xl">
-            <BlurFade inView direction="up">
-              <h2 className="text-3xl sm:text-[2.4rem]">what i got wrong</h2>
-            </BlurFade>
-            <ul className="mt-8 border-y border-cream/10">
-              {WRONGS.map((w, i) => (
-                <li key={w.did} className="border-b border-cream/10 last:border-b-0">
-                  <BlurFade inView delay={i * 0.08} direction="up">
-                    <div className="grid gap-1 py-6 sm:grid-cols-2 sm:gap-10">
-                      <p className="font-display text-lg text-cream/95 sm:text-xl">{w.did}</p>
-                      <p className="text-sm leading-relaxed text-cream/50 sm:text-base">
-                        {w.got}
-                      </p>
-                    </div>
-                  </BlurFade>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -372,14 +296,7 @@ export default function App() {
         <div className="shell">
           <div className="mx-auto max-w-3xl">
             <BlurFade inView direction="up">
-              <p className="eyebrow">okay. here's the question.</p>
-              <h2 className="mt-3 text-3xl sm:text-[2.6rem]">
-                Three buttons. Two of them are cowards.
-              </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-cream/55 sm:text-base">
-                Only one of them means it. The other two have legs, and no intention of letting
-                you press them — I checked.
-              </p>
+              <h2 className="text-3xl sm:text-[2.6rem]">so… forgive me?</h2>
             </BlurFade>
 
             <div className="mt-10">
@@ -388,7 +305,7 @@ export default function App() {
                   <Heart className="mx-auto size-9 text-rose" />
                   <h3 className="mt-3 text-2xl">you already forgave me</h3>
                   <p className="mx-auto mt-2 max-w-sm text-sm text-cream/60">
-                    Thank you again, sonna ji. The menu is still here if you want it.
+                    Thank you, sonna ji.
                   </p>
                   <button
                     type="button"
@@ -403,38 +320,6 @@ export default function App() {
               )}
             </div>
 
-            <p className="mt-6 text-center text-[0.7rem] tracking-wide text-cream/35">
-              warning: this section is rigged in your favour.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ───────────────────────── promises (unlocks) ───────────────────────── */}
-      <section id="promises" className="relative z-10 scroll-mt-20 pb-24 sm:pb-28">
-        <div className="shell">
-          <div className="mx-auto max-w-4xl">
-            <BlurFade inView direction="up">
-              <p className="eyebrow">not big promises. boring ones, kept.</p>
-              <h2 className="mt-3 text-3xl sm:text-[2.6rem]">twelve promises</h2>
-            </BlurFade>
-
-            <Gate open={forgiven} label="unlocks when you forgive me">
-              <ol className="mt-10 grid gap-x-12 gap-y-0 sm:grid-cols-2">
-                {PROMISES.map((p, i) => (
-                  <li key={p} className="border-b border-cream/10 py-5">
-                    <div className="flex gap-4">
-                      <span className="mt-1 text-[0.65rem] tracking-[0.18em] text-gold/60">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <p className="text-sm leading-relaxed text-cream/75 sm:text-[0.95rem]">
-                        {p}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </Gate>
           </div>
         </div>
       </section>
@@ -444,14 +329,13 @@ export default function App() {
         <div className="shell">
           <div className="mx-auto max-w-4xl">
             <BlurFade inView direction="up">
-              <p className="eyebrow">a list i should say out loud more often</p>
-              <h2 className="mt-3 text-3xl sm:text-[2.6rem]">why i love you</h2>
+              <h2 className="text-3xl sm:text-[2.6rem]">why i love you</h2>
             </BlurFade>
 
-            <Gate open={forgiven} label="also unlocks when you forgive me">
-              <div className="relative mt-10 flex flex-col gap-3 overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+            <Gate open={forgiven} label="unlocks when you forgive me">
+              <div className="relative mt-8 flex flex-col gap-3 overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
                 <Marquee reverse pauseOnHover className="[--duration:34s] [--gap:0.75rem] p-0">
-                  {REASONS.slice(0, 6).map((r) => (
+                  {REASONS.slice(0, 4).map((r) => (
                     <span
                       key={r}
                       className="rounded-full border border-cream/12 bg-cream/[0.04] px-4 py-2 text-sm whitespace-nowrap text-cream/75"
@@ -461,7 +345,7 @@ export default function App() {
                   ))}
                 </Marquee>
                 <Marquee pauseOnHover className="[--duration:38s] [--gap:0.75rem] p-0">
-                  {REASONS.slice(6).map((r) => (
+                  {REASONS.slice(4).map((r) => (
                     <span
                       key={r}
                       className="rounded-full border border-cream/12 bg-cream/[0.04] px-4 py-2 text-sm whitespace-nowrap text-cream/75"
@@ -471,10 +355,6 @@ export default function App() {
                   ))}
                 </Marquee>
               </div>
-
-              <p className="hand mt-8 text-center text-base text-cream/50 sm:text-lg">
-                and about a hundred more i'll tell you in person, one bad day at a time.
-              </p>
             </Gate>
           </div>
         </div>
@@ -484,10 +364,7 @@ export default function App() {
       <footer className="relative z-10 border-t border-cream/10 py-12">
         <div className="shell flex flex-col items-center gap-4 text-center">
           <p className="hand text-2xl text-cream/80">for anjali, always.</p>
-          <p className="max-w-md text-xs leading-relaxed text-cream/40">
-            made slowly, on purpose, at 1 a.m. — no templates, no shortcuts, only one very sorry
-            golu · 21 november 2026
-          </p>
+          <p className="text-xs tracking-[0.2em] text-cream/35 uppercase">sorry, golu</p>
           {forgiven && (
             <button
               type="button"
