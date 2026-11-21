@@ -8,13 +8,12 @@ refuse to be pressed, and a very satisfying 100%.
 
 1. **Hero** — "Hello, my *most beautiful* girlfriend", her photo in an arched frame,
    warm aurora wash and drifting gold dust
-2. **A scrolling strip** — meri sonna ji, i'm sorry, i love you
-3. **The letter** — the apology, written out word by word
+2. **A scrolling strip** — her words: meri sonna ji, i am really sorry, i love you soo soo much
+3. **The apology** — his text, word by word, no additions
 4. **The question** — three buttons. Two of them run away from the cursor and refuse to
    be pressed; the third one drifts slowly and is the only one that means it
 5. **Poppers + the yay menu** — clicking `forgive 100%` fires confetti (paper + heart
    shapes), then opens a small menu
-6. **Why I love you** — two counter-scrolling rows of reasons, padlocked until she forgives me
 
 The forgiveness state is remembered in `localStorage`, so a refresh keeps the site
 unlocked.

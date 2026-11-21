@@ -46,10 +46,10 @@ export function ForgiveArena({ forgiven, onForgive }) {
       const kind = el.dataset.drift
       const home =
         kind === "full"
-          ? { x: a.width * 0.5, y: a.height * 0.42 }
+          ? { x: a.width * 0.5, y: a.height * 0.38 }
           : kind === "half"
-            ? { x: a.width * 0.24, y: a.height * 0.8 }
-            : { x: a.width * 0.76, y: a.height * 0.8 }
+            ? { x: a.width * 0.24, y: a.height * 0.78 }
+            : { x: a.width * 0.76, y: a.height * 0.78 }
       return {
         el,
         kind,
@@ -91,7 +91,7 @@ export function ForgiveArena({ forgiven, onForgive }) {
           const ampY = Math.min(a.height * 0.1, 26)
           const drift = reduce ? 0 : 1
           it.x = a.width * 0.5 + Math.sin(t * 0.42 + it.phase) * ampX * drift
-          it.y = a.height * 0.44 + Math.cos(t * 0.61 + it.phase) * ampY * drift
+          it.y = a.height * 0.4 + Math.cos(t * 0.61 + it.phase) * ampY * drift
           it.scale = (reduce ? 1 : grow) * (1 + Math.sin(t * 1.6) * 0.012)
         } else {
           const px = pointer.current.x
@@ -185,7 +185,7 @@ export function ForgiveArena({ forgiven, onForgive }) {
     <div className="relative">
       <div
         ref={arenaRef}
-        className="grain relative h-[26rem] w-full overflow-hidden rounded-[2rem] border border-cream/10 bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(228,85,122,0.22),transparent_60%),radial-gradient(90%_90%_at_80%_110%,rgba(244,201,164,0.14),transparent_60%)] sm:h-[24rem]"
+        className="grain relative h-[22rem] w-full overflow-hidden rounded-[2rem] border border-cream/10 bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(228,85,122,0.22),transparent_60%),radial-gradient(90%_90%_at_80%_110%,rgba(244,201,164,0.14),transparent_60%)] sm:h-[21rem]"
       >
         <Meteors number={12} className="opacity-40" />
 
